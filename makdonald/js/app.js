@@ -228,3 +228,11 @@ confirmBtn.addEventListener("click",()=>{
   modal.style.padding="0px"
   overlay.style.display="none"
 })
+
+
+overlay.addEventListener("click",()=>{
+  modal.style.height="0%"
+  modal.style.padding="0px"
+  overlay.style.display="none"
+})
+
