@@ -5,6 +5,10 @@ const discountPrice = document.getElementById("discount-price");
 const discountInput = document.getElementById("discount-input");
 const discountBtn = document.getElementById("discount-btn");
 const payment = document.getElementById("payment");
+const confirmBtn = document.getElementById("confirm");
+const overlay = document.getElementById("overlay");
+const sefareshBtn = document.getElementById("sefaresh-btn");
+const modal = document.getElementById("modal");
 
 let totalAllPrice = 0;
 
@@ -210,3 +214,17 @@ discountBtn.addEventListener("click", () => {
   discountPrice.textContent = `${setDiscount()}درصد`;
   payment.textContent=`${totalAllPrice -(totalAllPrice*setDiscount()/100)}تومان`
 });
+
+
+sefareshBtn.addEventListener("click",()=>{
+  modal.style.height="20%"
+  modal.style.padding="10px"
+  overlay.style.display="block"
+})
+
+
+confirmBtn.addEventListener("click",()=>{
+  modal.style.height="0%"
+  modal.style.padding="0px"
+  overlay.style.display="none"
+})

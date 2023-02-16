@@ -10,7 +10,7 @@
 
 body,html{
     max-width: 100%;
-    height: 100%;
+    height: fit-content;
     background-color: #EA3918;
     padding-top: 20px;
 }
@@ -127,4 +127,47 @@ p{
 
 .h-40px{
     height: 35px;
+}
+
+
+.overlay{
+    position: absolute;
+    width: 100%;
+    height: 142%;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.259);
+    top: 0;
+    display: none;
+    
+}
+
+.modal{
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 22%;
+    height: 0%;
+    z-index: 5;
+    background-color: white;
+    border-radius: 12px;
+    padding: 0px;
+    transition: all 0.5s;
+}
+
+p{text-align: center;}
+
+.bt-style{
+    width: 80%;
+    background-color: #EA3918;
+    color: white;
+    margin: 10px 0;
+}
+
+
+@media(max-width:500px){
+    .modal{
+        width: 50%;
+    }
 }
